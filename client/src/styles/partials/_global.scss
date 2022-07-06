@@ -1,4 +1,6 @@
 @use "./variables" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
 
 *,
 *::before,
@@ -7,7 +9,6 @@
 }
 
 button {
-  background-color: black;
   &:hover {
     background-color: lightblue;
   }
@@ -22,16 +23,24 @@ body {
   color: white;
   text-decoration: none;
   display: block;
-  padding: 1.5rem 0.7rem 2rem;
   text-align: left;
   border-radius: 4%;
-  width: 12rem;
-  height: 2rem;
   font-size: 1rem;
- 
+  width: 10rem;
+  height: 2rem;
+  padding: 1rem 0.5rem 1.5rem;
+  @include tablet {
+    padding: 1.5rem 0.7rem 2rem;
+    width: 11rem;
+  }
+  @include desktop{
+    margin-left: 4rem;
+    width: 15rem;
+  }
+
   &:hover {
     background-color: lightblue;
-     background-color: lightblue;
+    background-color: lightblue;
   }
 }
 .active-button {

@@ -3,27 +3,65 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
+.nav-btn {
+  position: fixed;
+  left: 90%;
+  top: 0.7rem;
+  z-index: 10;
+  cursor: pointer;
+  @include tablet {
+    display: none;
+  }
+}
 .nav {
   background-color: black;
   margin: 0px;
   color: white;
   height: 100vh;
-  width: 15rem;
+  width: 40%;
+
   &__logo-link {
     color: white;
     display: block;
-    margin-bottom: 16rem;
+    margin-bottom: 10rem;
     text-decoration: none;
-    padding: 1rem 3rem;
+    padding: 1rem;
     font-weight: 700;
     font-size: 2rem;
-    
+    @include tablet {
+      color: white;
+      display: block;
+      margin-bottom: 16rem;
+      text-decoration: none;
+      padding: 1rem 3rem;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+    @include desktop{
+      margin-left: 4rem;
+      margin-bottom: 20rem;
+    }
   }
+
   &__list {
-    padding-left: 2.5rem;
+    @include tablet {
+      padding-left: 2.5rem;
+    }
   }
   &__list-item {
     list-style-type: none;
     margin-bottom: 1rem;
+  }
+}
+
+.non-existent {
+  display: none;
+  @include tablet {
+    display: block;
+    background-color: black;
+    margin: 0px;
+    color: white;
+    height: 100vh;
+    width: 30%;
   }
 }

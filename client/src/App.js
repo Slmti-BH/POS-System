@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Nav />
+        {/* <Nav /> */}
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/inv" element={<InventoryPage />} />
