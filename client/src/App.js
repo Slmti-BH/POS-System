@@ -8,10 +8,12 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        {/* <Nav /> */}
+        <Nav />
         <Routes>
           <Route exact path="/" element={<HomePage />} />
           <Route exact path="/inv" element={<InventoryPage />} />
+          <Route path="/inv/items?sortby&dir" element={<InventoryPage/>}   />
+         
         </Routes>
       </BrowserRouter>
     </div>

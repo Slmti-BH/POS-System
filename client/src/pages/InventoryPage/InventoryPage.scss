@@ -1,0 +1,54 @@
+.invt {
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 4.5rem;
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+  }
+  &__title-link{
+    text-decoration: none;
+
+  }
+  &__container {
+    background-color: lightgrey;
+    margin-top: 0;
+    height: 100vh;
+  }
+  &__sub-title {
+    margin-top: 0;
+    margin-left: 1.5rem;
+    padding-top: 1.5rem;
+    font-weight: 400;
+    font-size: 1rem;
+    border-bottom: 0.01rem solid grey;
+  }
+  &__card-container {
+    display: flex;
+    margin-left: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  &__search-card {
+    display: flex;
+    flex-direction: row;
+    width: 9rem;
+    height: 9rem;
+    border: 1px solid gray;
+    border-radius: 4px;
+    background-image: url("../../assets/icons/search-icon.PNG");
+    background-size: cover;
+  }
+  &__add-card{
+    @extend .invt__search-card;
+    background-image: url("../../assets/icons/add-icon.PNG");
+  }
+  &__card-title {
+    font-weight: 400;
+    margin-left: 0.25rem;
+    margin-bottom: 0.2rem;
+    align-self: flex-end;
+  }
+
+}
