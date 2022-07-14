@@ -11,9 +11,10 @@ const inventoryRoutes = require("./routes/inventory");
 // });
 
 db.connect((err) => {
-  if (err) {
-    throw err;
-  }
+   if (err) {
+     console.error("error connecting: " + err.stack);
+     return;
+   }
   console.log("Mysql connected...");
 });
 
