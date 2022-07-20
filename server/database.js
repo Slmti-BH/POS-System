@@ -1,9 +1,7 @@
-const mysql=require("mysql");
-module.exports=mysql.createConnection({
-    host:"localhost",
-    user:"root",
-    password:"root",
-    database: "pos",
-    port:"3306"
-    
-})
+const mysql = require("mysql");
+module.exports = mysql.createConnection({
+  host: "localhost",
+  user: "root",
+  password: "rootroot",
+  database: "pos",
+});
